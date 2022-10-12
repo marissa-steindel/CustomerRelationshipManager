@@ -6,6 +6,6 @@ Rails.application.routes.draw do
 
   get "/alphabetized", to: "customers#alphabetized"
 
-  get "/missing_email" to: "customers#missing_email"
+  get "/missing_email", to: "customers#missing_email"
 
 end
