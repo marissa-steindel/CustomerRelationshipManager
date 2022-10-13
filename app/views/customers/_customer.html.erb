@@ -2,4 +2,7 @@
   <h2> <%= customer.name %> </h2>
   <p><strong>Phone Number:</strong> <%= customer.phone %> </p>
   <p><strong>Email:</strong> <%= customer.email %> </p>
+  <% if customer.image.present? %>
+    <%= image_tag customer.image %>
+  <% end %>
 </div>
