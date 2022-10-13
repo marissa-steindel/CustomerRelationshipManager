@@ -1,5 +1,28 @@
 ActiveAdmin.register Customer do
-  permit_params :name, :phone, :email, :notes
+  permit_params :name, :phone, :email, :notes, :image
+
+  form do |f|
+    # shows errors on :base
+    f.semantic_errors
+
+    # builds an input field for every attribute
+    f.inputs
+
+    # add additional inputs - based on formtastic gem
+    f.inputs do
+      f.input :image, as: :file
+    end
+
+    # adds the 'Submit' and 'Cancel' buttons
+    f.actions
+  end
+
+  # show do
+  #   # renders app/views/admin/customers/_image.html.erb
+  #   render 'image'
+  # end
+
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
