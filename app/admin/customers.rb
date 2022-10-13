@@ -1,5 +1,13 @@
 ActiveAdmin.register Customer do
   permit_params :name, :phone, :email, :notes, :image
+
+  form do |f|
+    f.semantic_errors # shows errors on :base
+    f.inputs          # builds an input field for every attribute
+    f.actions         # adds the 'Submit' and 'Cancel' buttons
+  end
+
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
