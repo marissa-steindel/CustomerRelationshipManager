@@ -2,9 +2,19 @@ ActiveAdmin.register Customer do
   permit_params :name, :phone, :email, :notes, :image
 
   form do |f|
-    f.semantic_errors # shows errors on :base
-    f.inputs          # builds an input field for every attribute
-    f.actions         # adds the 'Submit' and 'Cancel' buttons
+    # shows errors on :base
+    f.semantic_errors
+
+    # builds an input field for every attribute
+    f.inputs
+
+    # add additional inputs - based on formtastic gem
+    f.inputs do
+      f.input :image, as: :file
+    end
+
+    # adds the 'Submit' and 'Cancel' buttons
+    f.actions
   end
 
 
