@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>CustomerRelationshipManager</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,7 +11,18 @@
     <%= javascript_importmap_tags %>
   </head>
 
+  <header>
+    <nav>
+      <ul>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Alphabetized', customers_alphabetized_path %></li>
+        <li><%= link_to 'Missing Email', customers_missing_email_path %></li>
+      </ul>
+    </nav>
+  </header>
+
   <body>
     <%= yield %>
   </body>
+
 </html>
