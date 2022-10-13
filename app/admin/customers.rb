@@ -17,6 +17,11 @@ ActiveAdmin.register Customer do
     f.actions
   end
 
+  # show do
+  #   # renders app/views/admin/customers/_image.html.erb
+  #   render 'image'
+  # end
+
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
